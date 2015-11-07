@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+ xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>ScieraWebServiceDev</display-name>
+  <context-param>
+        <param-name>org.apache.activemq.brokerURL</param-name>
+        <param-value>tcp://localhost:61616</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>org.apache.activemq.embeddedBroker</param-name>
+        <param-value>true</param-value>
+      
+    </context-param>
+  <servlet>
+    <description>Spring MVC Dispatcher Servlet</description>
+    <servlet-name>intrafest</servlet-name>
+    <servlet-class>
+        org.springframework.web.servlet.DispatcherServlet
+    </servlet-class>
+    <init-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>
+            /WEB-INF/context.xml
+        </param-value>
+    </init-param>
+    <load-on-startup>2</load-on-startup>
+</servlet>
+   
+  <servlet-mapping>
+ <servlet-name>intrafest</servlet-name>
+    <url-pattern>/</url-pattern>
+</servlet-mapping> 
+<servlet>
+    <servlet-name>ResourceServlet</servlet-name>
+    <servlet-class>com.meshyog.controllerservlet.ResourcesServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+</servlet>
+<servlet-mapping>
+    <servlet-name>ResourceServlet</servlet-name>
+    <url-pattern>/resources/*</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+    <servlet-name>ResourceServlet</servlet-name>
+    <url-pattern>*.woff</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+    <servlet-name>ResourceServlet</servlet-name>
+    <url-pattern>*.ttf</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+    <servlet-name>ResourceServlet</servlet-name>
+    <url-pattern>*.svg</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>CanWaterAppStartUpServlet</servlet-name>
+    <servlet-class>com.meshyog.controllerservlet.CanWaterAppStartupServlet</servlet-class>
+    <load-on-startup>3</load-on-startup>
+</servlet>
+<servlet>
+    <servlet-name>amq</servlet-name>
+    <servlet-class>com.meshyog.controllerservlet.AjaxServlet</servlet-class>
+    
+    <async-supported>true</async-supported>
+</servlet>
+<!-- org.apache.activemq.web.QueueBrowseServlet  -->
+<servlet>
+    <servlet-name>QueueBrowseServlet</servlet-name>
+    <servlet-class>com.meshyog.controllerservlet.QueueBrowseServlet </servlet-class>
+    <async-supported>true</async-supported>
+</servlet>
+	<servlet-mapping>
+		<servlet-name>QueueBrowseServlet</servlet-name>
+		<url-pattern>/queueBrowse/*</url-pattern>
+	</servlet-mapping>
+<servlet-mapping>
+    <servlet-name>amq</servlet-name>
+    <url-pattern>/amq/*</url-pattern>
+</servlet-mapping>
+ 
+ <servlet>
+  <servlet-name>IndexServlet</servlet-name>
+  <servlet-class>com.meshyog.controllerservlet.IndexServletController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>IndexServlet</servlet-name>
+  <url-pattern>/launch</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+  <servlet-name>SignUpController</servlet-name>
+  <servlet-class>com.meshyog.controllerservlet.SignUpController</servlet-class>
+  </servlet>
+
+  <servlet>
+  <servlet-name>DistributorController</servlet-name>
+  <servlet-class>com.meshyog.controllerservlet.DistributorController</servlet-class>
+  </servlet>
+  
+  <servlet>
+  <servlet-name>ConsumerServletController</servlet-name>
+  <servlet-class>com.meshyog.controllerservlet.ConsumerController</servlet-class>
+ 
+  </servlet>
+  
+  <servlet>
+  <servlet-name>ConsumerOrderRequestController</servlet-name>
+  <servlet-class>com.meshyog.controllerservlet.ConsumerOrderRequestController</servlet-class>
+  </servlet>
+  
+  <servlet>
+        <servlet-name>MessageServlet</servlet-name>
+        <servlet-class>org.apache.activemq.web.MessageServlet</servlet-class>
+     </servlet>
+   <servlet-mapping>
+        <servlet-name>MessageServlet</servlet-name>
+        <url-pattern>/message/*</url-pattern>
+    </servlet-mapping>
+    
+  <servlet-mapping>
+  <servlet-name>DistributorController</servlet-name>
+  <url-pattern>/addwatercan-stock-form-submit</url-pattern>
+  </servlet-mapping>
+   <servlet-mapping>
+  <servlet-name>DistributorController</servlet-name>
+  <url-pattern>/stocks-info-page</url-pattern>
+  </servlet-mapping>
+   <servlet-mapping>
+  <servlet-name>DistributorController</servlet-name>
+  <url-pattern>/update-can-info-page</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  <servlet-name>DistributorController</servlet-name>
+  <url-pattern>/delete-can-info</url-pattern>
+  </servlet-mapping>
+   <servlet-mapping>
+  <servlet-name>DistributorController</servlet-name>
+  <url-pattern>/stock-entry-form</url-pattern>
+  </servlet-mapping>
+   <servlet-mapping>
+  <servlet-name>DistributorController</servlet-name>
+  <url-pattern>/get-stck-entry-jsons</url-pattern>
+  </servlet-mapping>
+
+ 
+  <servlet-mapping>
+  <servlet-name>SignUpController</servlet-name>
+  <url-pattern>/distributor-register</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  <servlet-name>SignUpController</servlet-name>
+  <url-pattern>/distributor-register-form-submit</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  <servlet-name>SignUpController</servlet-name>
+  <url-pattern>/user-login</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  <servlet-name>SignUpController</servlet-name>
+  <url-pattern>/user-login-validation</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  <servlet-name>SignUpController</servlet-name>
+  <url-pattern>/ajax-login-user-validation</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  <servlet-name>SignUpController</servlet-name>
+  <url-pattern>/log-out</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  <servlet-name>ConsumerServletController</servlet-name>
+  <url-pattern>/consumer</url-pattern>
+  </servlet-mapping>
+   <servlet-mapping>
+  <servlet-name>ConsumerServletController</servlet-name>
+  <url-pattern>/display-water-can</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  <servlet-name>ConsumerOrderRequestController</servlet-name>
+  <url-pattern>/consumer-order-request</url-pattern>
+  </servlet-mapping>
+  
+   <resource-ref>
+    <description>JNDI JMS Conn Factory </description>
+    <res-ref-name>java:comp/env/jms/ConnectionFactory</res-ref-name>
+    <res-type>javax.jms.QueueConnectionFactory</res-type>  
+    <res-auth>Container</res-auth>  
+    <res-sharing-scope>Shareable</res-sharing-scope>
+</resource-ref>
+<resource-ref>
+    <description>JNDI JMS Queue </description>
+    <res-ref-name>java:comp/env/jms/queue/MyQueue</res-ref-name>
+    <res-type>javax.jms.Queue</res-type>
+    <res-auth>Container</res-auth>
+</resource-ref> 
+  
+	<filter>
+		<filter-name>ValidUserTestFilter</filter-name>
+		<filter-class>com.meshyog.filters.ValidUserTestFilter</filter-class>
+		<async-supported>true</async-supported>
+	</filter>
+	<filter-mapping>
+		<filter-name>ValidUserTestFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>  
+	<!-- <filter>
+      <filter-name>session</filter-name>
+      <filter-class>org.eclipse.jetty.continuation.ContinuationFilter</filter-class>
+      <async-supported>true</async-supported>
+    </filter>
+    <filter-mapping>
+      <filter-name>session</filter-name>
+      <url-pattern>/amq/*</url-pattern>
+    </filter-mapping> -->
+	<listener>
+    <listener-class>com.meshyog.listners.ApplicationListner</listener-class>
+  </listener>
+  
+   <!--  <listener>  
+    <listener-class>org.apache.activemq.web.SpringBrokerContextListener</listener-class>  
+    </listener> -->
+  <welcome-file-list>
+    <welcome-file>\jsp\loginrelated\userlogin.jsp</welcome-file>
+  </welcome-file-list>
+  
+</web-app>

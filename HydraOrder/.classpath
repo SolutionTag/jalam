@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="controllers/src"/>
+	<classpathentry kind="src" path="entity/src"/>
+	<classpathentry kind="lib" path="C:/apache-tomcat-8.0.26/lib/jsp-api.jar"/>
+	<classpathentry kind="lib" path="C:/apache-tomcat-8.0.26/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="E:/workspace1/ScieraWebServiceDev/WebContent/WEB-INF/lib/gson-2.2.4.jar"/>
+	<classpathentry kind="lib" path="E:/jar/mongodb jar/mongo-java-driver-3.1.0.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/gson-2.2.4.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/org-apache-commons-logging.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/xbean-spring-3.18.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/activemq-all-5.11.1.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/activemq-web-5.11.1.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/com.springsource.org.aopalliance-1.0.0.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/activemq-camel-5.11.1.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/camel-core-2.14.1.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/camel-jms-2.14.1.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/camel-spring-2.14.1.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/commons-pool-1.6.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/jstl-1.2.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/org.springframework.js-sources-2.3.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/spring-js-2.4.1.RELEASE.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="E:/jar/activemq/jetty-util-9.0.4.v20130625.jar"/>
+	<classpathentry kind="lib" path="C:/apache-activemq-5.11.1/lib/optional/spring-aop-3.2.11.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/apache-activemq-5.11.1/lib/optional/spring-beans-3.2.11.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/apache-activemq-5.11.1/lib/optional/spring-context-3.2.11.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/apache-activemq-5.11.1/lib/optional/spring-core-3.2.11.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/apache-activemq-5.11.1/lib/optional/spring-expression-3.2.11.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/apache-activemq-5.11.1/lib/optional/spring-jms-3.2.11.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/apache-activemq-5.11.1/lib/optional/spring-oxm-3.2.11.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/apache-activemq-5.11.1/lib/optional/spring-tx-3.2.11.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/jar/JSON-java-master/org.json-20120521.jar"/>
+	<classpathentry kind="lib" path="C:/apache-activemq-5.11.1/lib/web/spring-web-3.2.11.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/apache-activemq-5.11.1/lib/web/spring-webmvc-3.2.11.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/jar/org-apache-commons-logging.jar"/>
+	<classpathentry kind="lib" path="C:/apache-tomcat-8.0.26/lib/jetty-continuation-9.0.0.m0.jar"/>
+	<classpathentry kind="lib" path="C:/apache-tomcat-8.0.26/lib/jetty-util-9.0.4.v20130625.jar"/>
+	<classpathentry kind="lib" path="C:/apache-tomcat-8.0.26/lib/catalina.jar"/>
+	<classpathentry kind="lib" path="C:/apache-tomcat-8.0.26/lib/tomcat-util.jar"/>
+	<classpathentry kind="lib" path="E:/jar/org.springframework.js-sources-2.3.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/jar/spring-js-2.4.1.RELEASE.jar"/>
+	<classpathentry kind="output" path="WEB-INF/classes"/>
+</classpath>
